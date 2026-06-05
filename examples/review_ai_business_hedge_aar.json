@@ -1,0 +1,155 @@
+{
+  "type": "ReviewAAR",
+  "decision_log_input": {
+    "type": "DecisionLog",
+    "war_game_input": {
+      "type": "WarGame",
+      "mission": {
+        "id": "mission.build_ai_business",
+        "type": "Mission",
+        "name": "Build AI Business",
+        "owner_id": "agent.harish",
+        "current_state": "Technical capability present; business system not yet stabilized",
+        "target_trajectory": "Create compounding AI business flywheel",
+        "affair_ids": [
+          "affair.health"
+        ],
+        "interest_ids": [
+          "interest.ai_business"
+        ],
+        "resource_ids": [
+          "resource.time"
+        ],
+        "roadmap": [
+          "stabilize health and time base",
+          "ship small AI product/service",
+          "create content pipeline",
+          "convert attention into leads",
+          "convert leads into revenue"
+        ],
+        "blueprint": {
+          "nodes": [
+            "health",
+            "product",
+            "audience",
+            "leads",
+            "revenue"
+          ],
+          "edges": [
+            [
+              "health",
+              "execution_capacity"
+            ],
+            [
+              "product",
+              "audience"
+            ],
+            [
+              "audience",
+              "leads"
+            ],
+            [
+              "leads",
+              "revenue"
+            ]
+          ],
+          "volatility_exposure": "beneficial",
+          "exposure_size": 0.1,
+          "abort_condition": "Abort if the health base degrades for seven days."
+        },
+        "death_spiral_risk": 0.35,
+        "virtuous_spiral_score": 0.82,
+        "status": "draft"
+      },
+      "affairs": [
+        {
+          "id": "affair.health",
+          "type": "Affair",
+          "name": "Health",
+          "owner_id": "agent.harish",
+          "domain_ids": [
+            "domain.biology",
+            "domain.physiology"
+          ],
+          "scope": "horizontal",
+          "front": "inner",
+          "end": "hedge",
+          "stake": "Energy, body-system integrity, future play",
+          "deadline": null,
+          "cadence": "daily",
+          "fragility_score": 0.8,
+          "ruin_risk": false,
+          "priority_score": 0.95,
+          "status": "active"
+        }
+      ],
+      "interests": [
+        {
+          "id": "interest.ai_business",
+          "type": "Interest",
+          "name": "AI Business",
+          "owner_id": "agent.harish",
+          "domain_ids": [
+            "domain.technology",
+            "domain.business"
+          ],
+          "scope": "vertical",
+          "front": "outer",
+          "end": "edge",
+          "cost": null,
+          "downside": "Time and attention cost",
+          "upside": "Capital, leverage, agency, reputation",
+          "convexity_score": 0.9,
+          "optionality_score": 0.85,
+          "priority_score": 0.8,
+          "status": "active"
+        }
+      ],
+      "resources": [
+        {
+          "id": "resource.time",
+          "type": "Resource",
+          "name": "Time",
+          "resource_type": "asset",
+          "owner_id": "agent.harish",
+          "domain_ids": [
+            "domain.personal_operations"
+          ],
+          "quantity": 20,
+          "unit": "hours_per_week",
+          "liquidity": "medium",
+          "criticality_score": 0.8,
+          "status": "active"
+        }
+      ]
+    },
+    "recommendation": "Hedge",
+    "selected_decision": "Hedge",
+    "rationale": "Health is a high-priority fragile base, so the mission should proceed only as a small bounded bet while protecting recovery and execution capacity.",
+    "next_actions": [
+      "Protect the base routine before increasing mission exposure.",
+      "Limit mission work to a recoverable daily allocation.",
+      "Keep exposure small and increase only after review evidence improves."
+    ],
+    "owner": "agent.harish",
+    "created_at": "2026-06-05T19:50:00+05:30",
+    "review_date": "2026-06-12",
+    "status": "recorded"
+  },
+  "what_happened": "The hedge decision kept AI business work constrained to small recoverable blocks while protecting the health base.",
+  "what_changed": "Mission exposure stayed small, the health affair remained active, and the next useful constraint became consistent lead generation.",
+  "what_was_learned": "The mission can advance when edge-taking is sized by recovery capacity instead of excitement. Health remains the limiting base condition.",
+  "doctrine_updates": [],
+  "protocol_updates": [],
+  "mission_updates": [
+    "Keep AI business exposure below the survivable allocation until health and lead signals improve.",
+    "Review the abort condition at each weekly mission checkpoint."
+  ],
+  "follow_up_actions": [
+    "Run the base routine for seven consecutive days.",
+    "Ship one small AI business offer test.",
+    "Review lead signal quality before increasing exposure."
+  ],
+  "created_at": "2026-06-12T18:00:00+05:30",
+  "status": "completed"
+}

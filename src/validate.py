@@ -10,9 +10,15 @@ from pathlib import Path
 from pydantic import ValidationError
 
 try:
+    from .decision_log import validate_decision_log_payload
     from .models import ENTITY_MODELS
+    from .review import validate_review_payload
+    from .war_game import validate_war_game_payload
 except ImportError:  # Allows `python src/validate.py` from the repo root.
+    from decision_log import validate_decision_log_payload  # type: ignore[no-redef]
     from models import ENTITY_MODELS  # type: ignore[no-redef]
+    from review import validate_review_payload  # type: ignore[no-redef]
+    from war_game import validate_war_game_payload  # type: ignore[no-redef]
 
 
 DEFAULT_EXAMPLES_DIR = Path(__file__).resolve().parents[1] / "examples"
@@ -27,6 +33,18 @@ def validate_file(path: Path) -> None:
     entity_type = payload.get("type")
     if not isinstance(entity_type, str):
         raise ValueError(f"{path}: missing string field 'type'")
+
+    if entity_type == "WarGame":
+        validate_war_game_payload(payload)
+        return
+
+    if entity_type == "DecisionLog":
+        validate_decision_log_payload(payload)
+        return
+
+    if entity_type == "ReviewAAR":
+        validate_review_payload(payload)
+        return
 
     model = ENTITY_MODELS.get(entity_type)
     if model is None:

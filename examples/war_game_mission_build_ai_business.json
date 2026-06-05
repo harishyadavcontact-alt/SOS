@@ -1,0 +1,190 @@
+{
+  "type": "WarGame",
+  "mission": {
+    "id": "mission.build_ai_business",
+    "type": "Mission",
+    "name": "Build AI Business",
+    "owner_id": "agent.harish",
+    "current_state": "Technical capability present; business system not yet stabilized",
+    "target_trajectory": "Create compounding AI business flywheel",
+    "affair_ids": ["affair.health", "affair.income"],
+    "interest_ids": ["interest.ai_business", "interest.writing", "interest.sales"],
+    "resource_ids": ["resource.time", "resource.attention", "resource.cash"],
+    "roadmap": [
+      "stabilize health and time base",
+      "ship small AI product/service",
+      "create content pipeline",
+      "convert attention into leads",
+      "convert leads into revenue",
+      "reinvest into better product and distribution"
+    ],
+    "blueprint": {
+      "nodes": ["health", "writing", "product", "audience", "leads", "revenue"],
+      "edges": [
+        ["health", "execution_capacity"],
+        ["writing", "audience"],
+        ["audience", "leads"],
+        ["leads", "revenue"],
+        ["revenue", "product"],
+        ["product", "audience"]
+      ],
+      "volatility_exposure": "beneficial",
+      "exposure_size": 0.22,
+      "abort_condition": "Abort if health base degrades for seven days or cash runway falls below three months."
+    },
+    "death_spiral_risk": 0.35,
+    "virtuous_spiral_score": 0.82,
+    "status": "draft"
+  },
+  "affairs": [
+    {
+      "id": "affair.health",
+      "type": "Affair",
+      "name": "Health",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.biology", "domain.physiology"],
+      "scope": "horizontal",
+      "front": "inner",
+      "end": "hedge",
+      "stake": "Energy, body-system integrity, future play",
+      "deadline": null,
+      "cadence": "daily",
+      "fragility_score": 0.8,
+      "ruin_risk": false,
+      "priority_score": 0.95,
+      "status": "active"
+    },
+    {
+      "id": "affair.income",
+      "type": "Affair",
+      "name": "Income",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.business", "domain.finance"],
+      "scope": "horizontal",
+      "front": "private",
+      "end": "hedge",
+      "stake": "Cash flow, runway, optionality",
+      "deadline": null,
+      "cadence": "monthly",
+      "fragility_score": 0.55,
+      "ruin_risk": false,
+      "priority_score": 0.88,
+      "status": "active"
+    }
+  ],
+  "interests": [
+    {
+      "id": "interest.ai_business",
+      "type": "Interest",
+      "name": "AI Business",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.technology", "domain.business"],
+      "scope": "vertical",
+      "front": "outer",
+      "end": "edge",
+      "cost": null,
+      "downside": "Time and attention cost",
+      "upside": "Capital, leverage, agency, reputation",
+      "convexity_score": 0.9,
+      "optionality_score": 0.85,
+      "priority_score": 0.8,
+      "status": "active"
+    },
+    {
+      "id": "interest.writing",
+      "type": "Interest",
+      "name": "Writing",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.communication", "domain.business"],
+      "scope": "vertical",
+      "front": "public",
+      "end": "edge",
+      "cost": null,
+      "downside": "Small daily time cost",
+      "upside": "Audience, clarity, reputation, deal flow",
+      "convexity_score": 0.76,
+      "optionality_score": 0.74,
+      "priority_score": 0.72,
+      "status": "active"
+    },
+    {
+      "id": "interest.sales",
+      "type": "Interest",
+      "name": "Sales",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.business", "domain.communication"],
+      "scope": "vertical",
+      "front": "outer",
+      "end": "edge",
+      "cost": null,
+      "downside": "Rejection and time cost",
+      "upside": "Revenue, market truth, distribution skill",
+      "convexity_score": 0.72,
+      "optionality_score": 0.7,
+      "priority_score": 0.76,
+      "status": "active"
+    }
+  ],
+  "resources": [
+    {
+      "id": "resource.time",
+      "type": "Resource",
+      "name": "Time",
+      "resource_type": "asset",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.personal_operations"],
+      "quantity": 20,
+      "unit": "hours_per_week",
+      "liquidity": "medium",
+      "criticality_score": 0.8,
+      "status": "active"
+    },
+    {
+      "id": "resource.attention",
+      "type": "Resource",
+      "name": "Attention",
+      "resource_type": "asset",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.personal_operations"],
+      "quantity": 4,
+      "unit": "deep_work_blocks_per_week",
+      "liquidity": "medium",
+      "criticality_score": 0.85,
+      "status": "active"
+    },
+    {
+      "id": "resource.cash",
+      "type": "Resource",
+      "name": "Cash",
+      "resource_type": "asset",
+      "owner_id": "agent.harish",
+      "domain_ids": ["domain.finance"],
+      "quantity": 6,
+      "unit": "months_runway",
+      "liquidity": "high",
+      "criticality_score": 0.6,
+      "status": "active"
+    }
+  ],
+  "expected_output": {
+    "recommendation": "Hedge",
+    "triggered_gates": [
+      "ErgodicityGate",
+      "ConvexityGate",
+      "JensenGate",
+      "KellyGate",
+      "AbortGate"
+    ],
+    "reasoning_summary": "Sequence survival needs protection because fragile high-priority affairs: Health. Bounded-downside, high-convexity interests support edge-taking: AI Business, Writing, Sales. Mission blueprint says volatility helps this exposure. Exposure size 0.22 is inside survivable size 0.23. Abort condition is defined: Abort if health base degrades for seven days or cash runway falls below three months.",
+    "next_actions": [
+      "Protect the base routine before increasing mission exposure.",
+      "Limit mission work to a recoverable daily allocation.",
+      "Advance the highest-convexity interest with a small reversible bet.",
+      "Convert validated upside into mission roadmap updates.",
+      "Prefer options that gain from variability without risking the base.",
+      "Keep exposure small and increase only after review evidence improves.",
+      "Review the abort condition at the next mission checkpoint."
+    ],
+    "review_required": true
+  }
+}
