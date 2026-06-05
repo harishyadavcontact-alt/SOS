@@ -1,0 +1,15 @@
+{
+  "id": "routine.morning_base",
+  "type": "Routine",
+  "name": "Morning Base Routine",
+  "cadence": "daily",
+  "supports_affair_ids": ["affair.health"],
+  "supports_interest_ids": ["interest.ai_business"],
+  "steps": [
+    "Hydrate",
+    "Move for ten minutes",
+    "Review today's mission-critical action",
+    "Start with one protected work block"
+  ],
+  "status": "active"
+}

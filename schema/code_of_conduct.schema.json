@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/CodeOfConduct.schema.json",
+  "title": "CodeOfConduct",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "CodeOfConduct"
+    },
+    "name": {
+      "type": "string"
+    },
+    "craft_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "policies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "ratified",
+        "active",
+        "archived"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "craft_ids",
+    "policies",
+    "prohibited_actions",
+    "required_constraints",
+    "status"
+  ]
+}

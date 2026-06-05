@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Signal.schema.json",
+  "title": "Signal",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Signal"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "strength": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "skin_in_game_weight": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "related_entity_ids": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "triggers_review": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "source",
+    "observed_at",
+    "strength",
+    "confidence",
+    "skin_in_game_weight",
+    "triggers_review"
+  ]
+}

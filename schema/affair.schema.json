@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Affair.schema.json",
+  "title": "Affair",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Affair"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "domain_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "front": {
+      "type": "string",
+      "enum": [
+        "inner",
+        "private",
+        "public",
+        "outer"
+      ]
+    },
+    "end": {
+      "type": "string",
+      "enum": [
+        "hedge",
+        "abort"
+      ]
+    },
+    "stake": {
+      "type": "string"
+    },
+    "deadline": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cadence": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "daily",
+            "weekly",
+            "monthly",
+            "quarterly",
+            "annual",
+            "event_driven"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "fragility_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "ruin_risk": {
+      "type": "boolean"
+    },
+    "priority_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deferred",
+        "hedged",
+        "aborted",
+        "closed"
+      ]
+    },
+    "parent_affair_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "owner_id",
+    "domain_ids",
+    "scope",
+    "front",
+    "end",
+    "stake",
+    "fragility_score",
+    "ruin_risk",
+    "priority_score",
+    "status"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/SourceOfVolatility.schema.json",
+  "title": "SourceOfVolatility",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "SourceOfVolatility"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "force_type": {
+      "type": "string",
+      "enum": [
+        "complexity",
+        "evolution",
+        "history",
+        "market",
+        "politics",
+        "biology",
+        "culture",
+        "technology",
+        "law"
+      ]
+    },
+    "volatility_profile": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "description",
+    "force_type"
+  ]
+}

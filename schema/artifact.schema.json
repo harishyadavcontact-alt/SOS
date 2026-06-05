@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Artifact.schema.json",
+  "title": "Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Artifact"
+    },
+    "name": {
+      "type": "string"
+    },
+    "artifact_type": {
+      "type": "string",
+      "enum": [
+        "primary_source",
+        "memo",
+        "draft",
+        "doctrine",
+        "report",
+        "decision_log",
+        "aar",
+        "checklist"
+      ]
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "source",
+        "memo",
+        "draft",
+        "forge",
+        "hone",
+        "ratified",
+        "wield",
+        "review",
+        "updated",
+        "aborted",
+        "archived"
+      ]
+    },
+    "linked_entity_ids": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "content_path": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "artifact_type",
+    "lifecycle_state"
+  ]
+}

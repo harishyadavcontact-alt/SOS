@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Interest.schema.json",
+  "title": "Interest",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Interest"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "domain_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "front": {
+      "type": "string",
+      "enum": [
+        "inner",
+        "private",
+        "public",
+        "outer"
+      ]
+    },
+    "end": {
+      "type": "string",
+      "enum": [
+        "edge",
+        "abort"
+      ]
+    },
+    "cost": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "downside": {
+      "type": "string"
+    },
+    "upside": {
+      "type": "string"
+    },
+    "convexity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "optionality_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "priority_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "dormant",
+        "pursued",
+        "killed",
+        "converted_to_mission"
+      ]
+    },
+    "parent_interest_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "owner_id",
+    "domain_ids",
+    "scope",
+    "front",
+    "end",
+    "downside",
+    "upside",
+    "convexity_score",
+    "optionality_score",
+    "priority_score",
+    "status"
+  ]
+}

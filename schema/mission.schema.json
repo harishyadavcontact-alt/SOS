@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Mission.schema.json",
+  "title": "Mission",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Mission"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "current_state": {
+      "type": "string"
+    },
+    "target_trajectory": {
+      "type": "string"
+    },
+    "affair_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "interest_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "resource_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "roadmap": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blueprint": {
+      "type": "object"
+    },
+    "path_dependence_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scale_dependence_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "interdependence_notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "death_spiral_risk": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "virtuous_spiral_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "paused",
+        "completed",
+        "aborted",
+        "archived"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "owner_id",
+    "current_state",
+    "target_trajectory",
+    "affair_ids",
+    "interest_ids",
+    "resource_ids",
+    "roadmap",
+    "blueprint",
+    "death_spiral_risk",
+    "virtuous_spiral_score",
+    "status"
+  ]
+}

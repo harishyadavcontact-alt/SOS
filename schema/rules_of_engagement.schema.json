@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/RulesOfEngagement.schema.json",
+  "title": "RulesOfEngagement",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "RulesOfEngagement"
+    },
+    "name": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string"
+    },
+    "permitted_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "escalation_conditions": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "code_of_conduct_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "context",
+    "permitted_actions",
+    "prohibited_actions",
+    "code_of_conduct_id"
+  ]
+}
