@@ -1,0 +1,20 @@
+{
+  "id": "protocol.daily_review",
+  "type": "Protocol",
+  "name": "Daily Review Protocol",
+  "craft_id": "craft.personal_operations",
+  "code_of_conduct_id": "code_of_conduct.personal_operating_code",
+  "trigger_conditions": [
+    "End of active workday",
+    "Significant deviation from plan"
+  ],
+  "steps": [
+    "Record what was planned",
+    "Record what actually happened",
+    "Identify one constraint or lesson",
+    "Update tomorrow's first action"
+  ],
+  "kill_rule": "Retire or rewrite if the protocol fails to produce useful updates for two consecutive weekly reviews.",
+  "review_cadence": "weekly",
+  "status": "draft"
+}

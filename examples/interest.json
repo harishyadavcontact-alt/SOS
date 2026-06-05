@@ -1,0 +1,17 @@
+{
+  "id": "interest.ai_business",
+  "type": "Interest",
+  "name": "AI Business",
+  "owner_id": "agent.harish",
+  "domain_ids": ["domain.technology", "domain.business"],
+  "scope": "vertical",
+  "front": "outer",
+  "end": "edge",
+  "cost": null,
+  "downside": "Time and attention cost",
+  "upside": "Capital, leverage, agency, reputation",
+  "convexity_score": 0.9,
+  "optionality_score": 0.85,
+  "priority_score": 0.8,
+  "status": "active"
+}

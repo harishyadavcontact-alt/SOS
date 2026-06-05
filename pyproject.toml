@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sos-ontology"
+version = "0.1.0"
+description = "Local-first prototype for a personal System-of-Systems ontology engine."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7,<3"
+]
+
+[tool.setuptools]
+packages = ["src"]

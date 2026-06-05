@@ -1,0 +1,33 @@
+{
+  "id": "mission.build_ai_business",
+  "type": "Mission",
+  "name": "Build AI Business",
+  "owner_id": "agent.harish",
+  "current_state": "Technical capability present; business system not yet stabilized",
+  "target_trajectory": "Create compounding AI business flywheel",
+  "affair_ids": ["affair.health", "affair.income"],
+  "interest_ids": ["interest.ai_business", "interest.writing", "interest.sales"],
+  "resource_ids": ["resource.time", "resource.attention", "resource.cash"],
+  "roadmap": [
+    "stabilize health and time base",
+    "ship small AI product/service",
+    "create content pipeline",
+    "convert attention into leads",
+    "convert leads into revenue",
+    "reinvest into better product and distribution"
+  ],
+  "blueprint": {
+    "nodes": ["health", "writing", "product", "audience", "leads", "revenue"],
+    "edges": [
+      ["health", "execution_capacity"],
+      ["writing", "audience"],
+      ["audience", "leads"],
+      ["leads", "revenue"],
+      ["revenue", "product"],
+      ["product", "audience"]
+    ]
+  },
+  "death_spiral_risk": 0.35,
+  "virtuous_spiral_score": 0.82,
+  "status": "draft"
+}

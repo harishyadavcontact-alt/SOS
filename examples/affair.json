@@ -1,0 +1,17 @@
+{
+  "id": "affair.health",
+  "type": "Affair",
+  "name": "Health",
+  "owner_id": "agent.harish",
+  "domain_ids": ["domain.biology", "domain.physiology"],
+  "scope": "horizontal",
+  "front": "inner",
+  "end": "hedge",
+  "stake": "Energy, body-system integrity, future play",
+  "deadline": null,
+  "cadence": "daily",
+  "fragility_score": 0.8,
+  "ruin_risk": false,
+  "priority_score": 0.95,
+  "status": "active"
+}

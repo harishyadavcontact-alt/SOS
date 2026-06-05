@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Lineage.schema.json",
+  "title": "Lineage",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Lineage"
+    },
+    "name": {
+      "type": "string"
+    },
+    "scale": {
+      "type": "string",
+      "enum": [
+        "individual",
+        "family",
+        "clan",
+        "institution",
+        "civilization"
+      ]
+    },
+    "parent_lineage_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "continuity_goal": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "scale"
+  ]
+}

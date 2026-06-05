@@ -1,0 +1,10 @@
+{
+  "id": "regimen.execution_base",
+  "type": "Regimen",
+  "name": "Execution Base Regimen",
+  "routine_ids": ["routine.morning_base"],
+  "purpose": "Protect the health and attention base required for mission execution.",
+  "supports_affair_ids": ["affair.health"],
+  "supports_mission_ids": ["mission.build_ai_business"],
+  "status": "active"
+}

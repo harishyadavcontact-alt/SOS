@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/sos/schema/Review.schema.json",
+  "title": "Review",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "const": "Review"
+    },
+    "name": {
+      "type": "string"
+    },
+    "reviewed_entity_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "what_happened": {
+      "type": "string"
+    },
+    "what_changed": {
+      "type": "string"
+    },
+    "what_was_learned": {
+      "type": "string"
+    },
+    "doctrine_updates": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "protocol_updates": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "mission_updates": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "name",
+    "reviewed_entity_ids",
+    "what_happened",
+    "what_changed",
+    "what_was_learned",
+    "created_at"
+  ]
+}
