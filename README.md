@@ -66,6 +66,98 @@ python -m src.validate examples
 
 The validator reads each JSON object's `type` field, selects the matching Pydantic model from `src/models.py`, and validates the object locally. It does not require a database or network service.
 
+## Workflow
+
+```text
+Signal
+→ WarGame
+→ DecisionLog
+→ Operation
+→ Execution
+→ Review
+→ Doctrine Update
+```
+
+Run local validation:
+
+```bash
+python -B -m src.validate
+```
+
+Run a WarGame scenario:
+
+```bash
+python -B -m src.war_game examples/war_game_mission_build_ai_business.json
+```
+
+Summarize a DecisionLog:
+
+```bash
+python -B -m src.decision_log examples/decision_log_ai_business_hedge.json
+```
+
+Validate an Operation:
+
+```bash
+python -B -m src.operation examples/operation_ai_business_v1.json
+```
+
+Run a Review / AAR:
+
+```bash
+python -B -m src.review examples/review_ai_business_hedge_aar.json
+```
+
+## Visual Inspection
+
+Build a local reference index:
+
+```bash
+python -B -m src.index
+```
+
+Generate a taxonomy tree:
+
+```bash
+python -B -m src.view_taxonomy
+```
+
+Generate a Mermaid graph:
+
+```bash
+python -B -m src.view_graph
+```
+
+Generate the static War Room dashboard:
+
+```bash
+python -B -m src.view_war_room
+```
+
+## Interactive War Room
+
+Generate the interactive local four-state visualizer:
+
+```bash
+python -B -m src.view_interactive_war_room
+```
+
+Output:
+
+```text
+output/interactive_war_room.html
+```
+
+Open the file in a browser. The visualizer includes the four Genesis states, a collapsible tree, an ontology graph, a right-side inspector, and derived agenda/calendar sections inside State of Operations.
+
+Outputs:
+
+```text
+output/taxonomy.md
+output/ontology_graph.mmd
+output/war_room.html
+```
+
 ## Local-first workflow
 
 1. Edit ontology state/configuration as JSON or YAML files.

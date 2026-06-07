@@ -1,0 +1,45 @@
+{
+  "type": "ExampleBundle",
+  "objects": [
+    {
+      "id": "source.biology",
+      "type": "SourceOfVolatility",
+      "name": "Biology",
+      "description": "Embodied constraints, adaptation, recovery, illness, energy, and selection pressure.",
+      "force_type": "biology",
+      "volatility_profile": null
+    },
+    {
+      "id": "source.technology",
+      "type": "SourceOfVolatility",
+      "name": "Technology",
+      "description": "Tooling, automation, leverage, platform shifts, and capability change.",
+      "force_type": "technology",
+      "volatility_profile": null
+    },
+    {
+      "id": "source.market",
+      "type": "SourceOfVolatility",
+      "name": "Market",
+      "description": "Demand, price, distribution, competition, liquidity, and customer selection.",
+      "force_type": "market",
+      "volatility_profile": null
+    },
+    {
+      "id": "source.culture",
+      "type": "SourceOfVolatility",
+      "name": "Culture",
+      "description": "Attention, norms, language, reputation, and social meaning.",
+      "force_type": "culture",
+      "volatility_profile": null
+    },
+    {
+      "id": "source.complexity",
+      "type": "SourceOfVolatility",
+      "name": "Complexity",
+      "description": "Interdependence, nonlinear feedback, local constraints, and system behavior.",
+      "force_type": "complexity",
+      "volatility_profile": null
+    }
+  ]
+}

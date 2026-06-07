@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoS War Room</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17211b;
+      --muted: #5f6b63;
+      --line: #d8ddd7;
+      --paper: #fbfcfa;
+      --panel: #ffffff;
+      --accent: #176a5b;
+      --soft: #eef4f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    header {
+      padding: 28px 32px 18px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    h1, h2, h3, h4, p { margin: 0; }
+    h1 { font-size: 28px; }
+    header p { margin-top: 6px; color: var(--muted); }
+    main { padding: 24px 32px 40px; }
+    .state { margin-bottom: 34px; }
+    .state > h2 {
+      font-size: 20px;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+    .group { margin-bottom: 20px; }
+    .group > h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 14px;
+      min-height: 156px;
+    }
+    .card h4 { font-size: 16px; margin-bottom: 4px; }
+    .card p { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .meta { margin-top: 12px; display: grid; gap: 4px; }
+    .meta div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+    }
+    .meta span { color: var(--muted); }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    code {
+      background: var(--soft);
+      color: var(--accent);
+      padding: 3px 5px;
+      border-radius: 4px;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+    .empty {
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SoS War Room</h1>
+    <p>Static local inspection view generated from examples.</p>
+  </header>
+  <main>
+    <section class="state"><h2>State of the Art</h2><section class="group"><h3>Sources of Volatility</h3><div class="grid"><article class="card"><h4>Biology</h4><p>source.biology</p><div class="meta"><div><span>type</span>SourceOfVolatility</div></div></article><article class="card"><h4>Complexity</h4><p>source.complexity</p><div class="meta"><div><span>type</span>SourceOfVolatility</div></div></article><article class="card"><h4>Culture</h4><p>source.culture</p><div class="meta"><div><span>type</span>SourceOfVolatility</div></div></article><article class="card"><h4>Market</h4><p>source.market</p><div class="meta"><div><span>type</span>SourceOfVolatility</div></div></article><article class="card"><h4>Technology</h4><p>source.technology</p><div class="meta"><div><span>type</span>SourceOfVolatility</div></div></article></div></section><section class="group"><h3>Domains</h3><div class="grid"><article class="card"><h4>Biology</h4><p>domain.biology</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Business</h4><p>domain.business</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Communication</h4><p>domain.communication</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Finance</h4><p>domain.finance</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Personal Operations</h4><p>domain.personal_operations</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Physiology</h4><p>domain.physiology</p><div class="meta"><div><span>type</span>Domain</div></div></article><article class="card"><h4>Technology</h4><p>domain.technology</p><div class="meta"><div><span>type</span>Domain</div></div></article></div></section><section class="group"><h3>Crafts</h3><div class="grid"><article class="card"><h4>Personal Operations</h4><p>craft.personal_operations</p><div class="meta"><div><span>type</span>Craft</div>
+<div><span>status</span>draft</div></div><div class="links"><code>domain.personal_operations</code><code>domain.biology</code><code>domain.business</code></div></article></div></section><section class="group"><h3>Models</h3><div class="grid"><p class="empty">none detected</p></div></section><section class="group"><h3>Signals</h3><div class="grid"><p class="empty">none detected</p></div></section></section><section class="state"><h2>State of Affairs</h2><section class="group"><h3>Affairs</h3><div class="grid"><article class="card"><h4>Health</h4><p>affair.health</p><div class="meta"><div><span>type</span>Affair</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>scope</span>horizontal</div>
+<div><span>end</span>hedge</div>
+<div><span>priority</span>0.95</div></div><div class="links"><code>domain.biology</code><code>domain.physiology</code><code>agent.harish</code></div></article><article class="card"><h4>Income</h4><p>affair.income</p><div class="meta"><div><span>type</span>Affair</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>scope</span>horizontal</div>
+<div><span>end</span>hedge</div>
+<div><span>priority</span>0.88</div></div><div class="links"><code>domain.business</code><code>domain.finance</code><code>agent.harish</code></div></article></div></section><section class="group"><h3>Interests</h3><div class="grid"><article class="card"><h4>AI Business</h4><p>interest.ai_business</p><div class="meta"><div><span>type</span>Interest</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>scope</span>vertical</div>
+<div><span>end</span>edge</div>
+<div><span>priority</span>0.80</div></div><div class="links"><code>domain.technology</code><code>domain.business</code><code>agent.harish</code></div></article><article class="card"><h4>Sales</h4><p>interest.sales</p><div class="meta"><div><span>type</span>Interest</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>scope</span>vertical</div>
+<div><span>end</span>edge</div>
+<div><span>priority</span>0.76</div></div><div class="links"><code>domain.business</code><code>domain.communication</code><code>agent.harish</code></div></article><article class="card"><h4>Writing</h4><p>interest.writing</p><div class="meta"><div><span>type</span>Interest</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>scope</span>vertical</div>
+<div><span>end</span>edge</div>
+<div><span>priority</span>0.72</div></div><div class="links"><code>domain.communication</code><code>domain.business</code><code>agent.harish</code></div></article></div></section><section class="group"><h3>Resources</h3><div class="grid"><article class="card"><h4>Attention</h4><p>resource.attention</p><div class="meta"><div><span>type</span>Resource</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div></div><div class="links"><code>domain.personal_operations</code><code>agent.harish</code></div></article><article class="card"><h4>Cash</h4><p>resource.cash</p><div class="meta"><div><span>type</span>Resource</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div></div><div class="links"><code>domain.finance</code><code>agent.harish</code></div></article><article class="card"><h4>Time</h4><p>resource.time</p><div class="meta"><div><span>type</span>Resource</div>
+<div><span>status</span>active</div>
+<div><span>owner</span>agent.harish</div></div><div class="links"><code>domain.personal_operations</code><code>agent.harish</code></div></article></div></section><section class="group"><h3>Missions</h3><div class="grid"><article class="card"><h4>Build AI Business</h4><p>mission.build_ai_business</p><div class="meta"><div><span>type</span>Mission</div>
+<div><span>status</span>draft</div>
+<div><span>owner</span>agent.harish</div></div><div class="links"><code>affair.health</code><code>interest.ai_business</code><code>agent.harish</code><code>resource.time</code></div></article></div></section></section><section class="state"><h2>State of Functions</h2><section class="group"><h3>WarGaming</h3><div class="grid"><article class="card"><h4>wargame.war_game_mission_build_ai_business</h4><p>wargame.war_game_mission_build_ai_business</p><div class="meta"><div><span>type</span>WarGame</div></div></article></div></section><section class="group"><h3>DecisionLogs</h3><div class="grid"><article class="card"><h4>decisionlog.decision_log_ai_business_hedge</h4><p>decisionlog.decision_log_ai_business_hedge</p><div class="meta"><div><span>type</span>DecisionLog</div>
+<div><span>status</span>recorded</div>
+<div><span>owner</span>agent.harish</div></div></article></div></section><section class="group"><h3>Reviews</h3><div class="grid"><article class="card"><h4>reviewaar.review_ai_business_hedge_aar</h4><p>reviewaar.review_ai_business_hedge_aar</p><div class="meta"><div><span>type</span>ReviewAAR</div>
+<div><span>status</span>completed</div></div></article></div></section><section class="group"><h3>Protocols</h3><div class="grid"><article class="card"><h4>Daily Review Protocol</h4><p>protocol.daily_review</p><div class="meta"><div><span>type</span>Protocol</div>
+<div><span>status</span>draft</div></div></article></div></section></section><section class="state"><h2>State of Operations</h2><section class="group"><h3>Operations</h3><div class="grid"><article class="card"><h4>Build AI Business Operation v1</h4><p>operation.build_ai_business.v1</p><div class="meta"><div><span>type</span>Operation</div>
+<div><span>status</span>planned</div>
+<div><span>owner</span>agent.harish</div>
+<div><span>priority</span>high</div></div><div class="links"><code>mission.build_ai_business</code><code>agent.harish</code></div></article></div></section><section class="group"><h3>Routines</h3><div class="grid"><article class="card"><h4>Creator Daily Routine</h4><p>routine.creator_daily</p><div class="meta"><div><span>type</span>Routine</div>
+<div><span>status</span>active</div></div><div class="links"><code>interest.ai_business</code></div></article><article class="card"><h4>Health Daily Routine</h4><p>routine.health_daily</p><div class="meta"><div><span>type</span>Routine</div>
+<div><span>status</span>active</div></div><div class="links"><code>affair.health</code></div></article><article class="card"><h4>Morning Base Routine</h4><p>routine.morning_base</p><div class="meta"><div><span>type</span>Routine</div>
+<div><span>status</span>active</div></div><div class="links"><code>affair.health</code><code>interest.ai_business</code></div></article></div></section><section class="group"><h3>Regimens</h3><div class="grid"><article class="card"><h4>Creator Regimen</h4><p>regimen.creator</p><div class="meta"><div><span>type</span>Regimen</div>
+<div><span>status</span>active</div></div><div class="links"><code>routine.creator_daily</code><code>mission.build_ai_business</code></div></article><article class="card"><h4>Execution Base Regimen</h4><p>regimen.execution_base</p><div class="meta"><div><span>type</span>Regimen</div>
+<div><span>status</span>active</div></div><div class="links"><code>routine.morning_base</code><code>affair.health</code><code>mission.build_ai_business</code></div></article><article class="card"><h4>Health Regimen</h4><p>regimen.health</p><div class="meta"><div><span>type</span>Regimen</div>
+<div><span>status</span>active</div></div><div class="links"><code>routine.health_daily</code><code>affair.health</code><code>mission.build_ai_business</code></div></article></div></section></section>
+  </main>
+</body>
+</html>

@@ -18,6 +18,26 @@ The system replaces infinite todos with structured objects:
 * Regimens: collections of routines.
 * Reviews: structured learning from contact with reality.
 
+## Philosophy of Action
+
+This is not a safety-only productivity system. Life is not optimized by safety alone, and it is not optimized by recklessness. The system protects the base while continuously exposing the operator to favorable asymmetry.
+
+Affairs preserve the ability to play. Interests create the opportunity to win. Missions coordinate affairs and interests through time so the operator can act with sustained agency rather than passive stability.
+
+A virtuous spiral occurs when protected affairs create energy, credibility, capability, and resources for pursuing interests; successful interests then reinforce and expand the affairs that made them possible.
+
+The base funds the frontier. The frontier expands the base.
+
+Rule:
+
+> Protected Base. Aggressive Frontier. No Dead Middle.
+
+Operational compression:
+
+* Hedge the Frontline.
+* Edge the Frontier.
+* Abort Ruin.
+
 ## 2. Top-Level Architecture
 
 | Branch       | Question                            | Primary State                            | Function            |

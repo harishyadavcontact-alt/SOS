@@ -1,0 +1,15 @@
+{
+  "id": "routine.creator_daily",
+  "type": "Routine",
+  "name": "Creator Daily Routine",
+  "cadence": "daily",
+  "supports_affair_ids": null,
+  "supports_interest_ids": ["interest.ai_business"],
+  "steps": [
+    "Review the mission objective",
+    "Complete one protected creation block",
+    "Publish or improve one market-facing artifact",
+    "Record the strongest signal from the work"
+  ],
+  "status": "active"
+}

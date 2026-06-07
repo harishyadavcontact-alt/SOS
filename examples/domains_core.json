@@ -1,0 +1,61 @@
+{
+  "type": "ExampleBundle",
+  "objects": [
+    {
+      "id": "domain.biology",
+      "type": "Domain",
+      "name": "Biology",
+      "source_ids": ["source.biology"],
+      "constraints": ["energy", "recovery", "adaptation"],
+      "parent_domain_id": null
+    },
+    {
+      "id": "domain.physiology",
+      "type": "Domain",
+      "name": "Physiology",
+      "source_ids": ["source.biology"],
+      "constraints": ["sleep", "movement", "nutrition"],
+      "parent_domain_id": "domain.biology"
+    },
+    {
+      "id": "domain.technology",
+      "type": "Domain",
+      "name": "Technology",
+      "source_ids": ["source.technology", "source.complexity"],
+      "constraints": ["tooling", "automation", "technical debt"],
+      "parent_domain_id": null
+    },
+    {
+      "id": "domain.business",
+      "type": "Domain",
+      "name": "Business",
+      "source_ids": ["source.market", "source.complexity"],
+      "constraints": ["cash flow", "distribution", "customer demand"],
+      "parent_domain_id": null
+    },
+    {
+      "id": "domain.personal_operations",
+      "type": "Domain",
+      "name": "Personal Operations",
+      "source_ids": ["source.complexity", "source.biology"],
+      "constraints": ["attention", "calendar", "recovery"],
+      "parent_domain_id": null
+    },
+    {
+      "id": "domain.finance",
+      "type": "Domain",
+      "name": "Finance",
+      "source_ids": ["source.market"],
+      "constraints": ["runway", "liquidity", "risk"],
+      "parent_domain_id": null
+    },
+    {
+      "id": "domain.communication",
+      "type": "Domain",
+      "name": "Communication",
+      "source_ids": ["source.culture", "source.market"],
+      "constraints": ["clarity", "attention", "trust"],
+      "parent_domain_id": null
+    }
+  ]
+}

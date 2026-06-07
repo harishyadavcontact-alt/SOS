@@ -1,0 +1,24 @@
+{
+  "id": "craft.personal_operations",
+  "type": "Craft",
+  "name": "Personal Operations",
+  "domain_ids": ["domain.personal_operations", "domain.biology", "domain.business"],
+  "source_ids": ["source.complexity", "source.biology", "source.market"],
+  "position": "craft",
+  "principles": [
+    "Protect the base before expanding exposure",
+    "Operate at the lowest useful level",
+    "Review after contact with reality"
+  ],
+  "maxims": [
+    "Hedge the Frontline",
+    "Edge the Frontier",
+    "Abort Ruin"
+  ],
+  "heuristics": [
+    "Prefer small reversible bets",
+    "Keep routines boring and missions alive"
+  ],
+  "models": ["barbell", "ergodicity", "convexity", "kelly"],
+  "status": "draft"
+}

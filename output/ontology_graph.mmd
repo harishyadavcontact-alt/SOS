@@ -1,0 +1,58 @@
+```mermaid
+graph TD
+  n_affair_health["Health\nAffair\naffair.health"]
+  n_affair_income["Income\nAffair\naffair.income"]
+  n_agent_harish["Harish\nAgent\nagent.harish"]
+  n_code_of_conduct_personal_operating_code["Personal Operating Code\nCodeOfConduct\ncode_of_conduct.personal_operating_code"]
+  n_craft_personal_operations["Personal Operations\nCraft\ncraft.personal_operations"]
+  n_decisionlog_decision_log_ai_business_hedge["decisionlog.decision_log_ai_business_hedge\nDecisionLog\ndecisionlog.decision_log_ai_business_hedge"]
+  n_domain_biology["Biology\nDomain\ndomain.biology"]
+  n_domain_business["Business\nDomain\ndomain.business"]
+  n_domain_communication["Communication\nDomain\ndomain.communication"]
+  n_domain_finance["Finance\nDomain\ndomain.finance"]
+  n_domain_personal_operations["Personal Operations\nDomain\ndomain.personal_operations"]
+  n_domain_physiology["Physiology\nDomain\ndomain.physiology"]
+  n_domain_technology["Technology\nDomain\ndomain.technology"]
+  n_examplebundle_domains_core["examplebundle.domains_core\nExampleBundle\nexamplebundle.domains_core"]
+  n_examplebundle_sources_core["examplebundle.sources_core\nExampleBundle\nexamplebundle.sources_core"]
+  n_interest_ai_business["AI Business\nInterest\ninterest.ai_business"]
+  n_interest_sales["Sales\nInterest\ninterest.sales"]
+  n_interest_writing["Writing\nInterest\ninterest.writing"]
+  n_mission_build_ai_business["Build AI Business\nMission\nmission.build_ai_business"]
+  n_operation_build_ai_business_v1["Build AI Business Operation v1\nOperation\noperation.build_ai_business.v1"]
+  n_operationbuild_operation_ai_business_v1["operationbuild.operation_ai_business_v1\nOperationBuild\noperationbuild.operation_ai_business_v1"]
+  n_protocol_daily_review["Daily Review Protocol\nProtocol\nprotocol.daily_review"]
+  n_regimen_creator["Creator Regimen\nRegimen\nregimen.creator"]
+  n_regimen_execution_base["Execution Base Regimen\nRegimen\nregimen.execution_base"]
+  n_regimen_health["Health Regimen\nRegimen\nregimen.health"]
+  n_resource_attention["Attention\nResource\nresource.attention"]
+  n_resource_cash["Cash\nResource\nresource.cash"]
+  n_resource_time["Time\nResource\nresource.time"]
+  n_reviewaar_review_ai_business_hedge_aar["reviewaar.review_ai_business_hedge_aar\nReviewAAR\nreviewaar.review_ai_business_hedge_aar"]
+  n_routine_creator_daily["Creator Daily Routine\nRoutine\nroutine.creator_daily"]
+  n_routine_health_daily["Health Daily Routine\nRoutine\nroutine.health_daily"]
+  n_routine_morning_base["Morning Base Routine\nRoutine\nroutine.morning_base"]
+  n_source_biology["Biology\nSourceOfVolatility\nsource.biology"]
+  n_source_complexity["Complexity\nSourceOfVolatility\nsource.complexity"]
+  n_source_culture["Culture\nSourceOfVolatility\nsource.culture"]
+  n_source_market["Market\nSourceOfVolatility\nsource.market"]
+  n_source_technology["Technology\nSourceOfVolatility\nsource.technology"]
+  n_wargame_war_game_mission_build_ai_business["wargame.war_game_mission_build_ai_business\nWarGame\nwargame.war_game_mission_build_ai_business"]
+  n_agent_harish -->|Affair| n_affair_health
+  n_agent_harish -->|Affair| n_affair_income
+  n_agent_harish -->|Interest| n_interest_ai_business
+  n_agent_harish -->|Interest| n_interest_sales
+  n_agent_harish -->|Interest| n_interest_writing
+  n_agent_harish -->|Mission| n_mission_build_ai_business
+  n_mission_build_ai_business -->|Affair| n_affair_health
+  n_mission_build_ai_business -->|Interest| n_interest_ai_business
+  n_mission_build_ai_business -->|Resource| n_resource_time
+  n_mission_build_ai_business -->|Operation| n_operation_build_ai_business_v1
+  n_regimen_creator -->|Routine| n_routine_creator_daily
+  n_regimen_execution_base -->|Routine| n_routine_morning_base
+  n_regimen_health -->|Routine| n_routine_health_daily
+  n_agent_harish -->|Resource| n_resource_attention
+  n_agent_harish -->|Resource| n_resource_cash
+  n_agent_harish -->|Resource| n_resource_time
+  n_reviewaar_review_ai_business_hedge_aar -->|Mission| n_mission_build_ai_business
+```

@@ -12,11 +12,13 @@ from pydantic import ValidationError
 try:
     from .decision_log import validate_decision_log_payload
     from .models import ENTITY_MODELS
+    from .operation import validate_operation_payload
     from .review import validate_review_payload
     from .war_game import validate_war_game_payload
 except ImportError:  # Allows `python src/validate.py` from the repo root.
     from decision_log import validate_decision_log_payload  # type: ignore[no-redef]
     from models import ENTITY_MODELS  # type: ignore[no-redef]
+    from operation import validate_operation_payload  # type: ignore[no-redef]
     from review import validate_review_payload  # type: ignore[no-redef]
     from war_game import validate_war_game_payload  # type: ignore[no-redef]
 
@@ -34,6 +36,25 @@ def validate_file(path: Path) -> None:
     if not isinstance(entity_type, str):
         raise ValueError(f"{path}: missing string field 'type'")
 
+    if entity_type == "ExampleBundle":
+        objects = payload.get("objects")
+        if not isinstance(objects, list) or not objects:
+            raise ValueError(f"{path}: ExampleBundle requires a non-empty objects list")
+        for index, item in enumerate(objects):
+            if not isinstance(item, dict):
+                raise ValueError(f"{path}: objects[{index}] must be a JSON object")
+            nested_type = item.get("type")
+            if not isinstance(nested_type, str):
+                raise ValueError(f"{path}: objects[{index}] missing string field 'type'")
+            model = ENTITY_MODELS.get(nested_type)
+            if model is None:
+                known = ", ".join(sorted(ENTITY_MODELS))
+                raise ValueError(
+                    f"{path}: objects[{index}] unknown type {nested_type!r}; expected one of: {known}"
+                )
+            model.model_validate(item)
+        return
+
     if entity_type == "WarGame":
         validate_war_game_payload(payload)
         return
@@ -44,6 +65,10 @@ def validate_file(path: Path) -> None:
 
     if entity_type == "ReviewAAR":
         validate_review_payload(payload)
+        return
+
+    if entity_type == "OperationBuild":
+        validate_operation_payload(payload)
         return
 
     model = ENTITY_MODELS.get(entity_type)

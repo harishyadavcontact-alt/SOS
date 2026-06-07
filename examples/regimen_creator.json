@@ -1,0 +1,10 @@
+{
+  "id": "regimen.creator",
+  "type": "Regimen",
+  "name": "Creator Regimen",
+  "routine_ids": ["routine.creator_daily"],
+  "purpose": "Coordinate daily creation loops for the AI business frontier.",
+  "supports_affair_ids": null,
+  "supports_mission_ids": ["mission.build_ai_business"],
+  "status": "active"
+}

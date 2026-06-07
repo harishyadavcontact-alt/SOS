@@ -1,0 +1,15 @@
+{
+  "id": "routine.health_daily",
+  "type": "Routine",
+  "name": "Health Daily Routine",
+  "cadence": "daily",
+  "supports_affair_ids": ["affair.health"],
+  "supports_interest_ids": null,
+  "steps": [
+    "Hydrate after waking",
+    "Move for ten minutes",
+    "Eat a protein-forward first meal",
+    "Review sleep, energy, and recovery signals"
+  ],
+  "status": "active"
+}

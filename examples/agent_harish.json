@@ -1,0 +1,9 @@
+{
+  "id": "agent.harish",
+  "type": "Agent",
+  "name": "Harish",
+  "lineage_id": null,
+  "authority_level": "operator",
+  "skin_in_game_score": 1.0,
+  "status": "active"
+}

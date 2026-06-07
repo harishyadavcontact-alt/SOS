@@ -1,0 +1,20 @@
+{
+  "id": "code_of_conduct.personal_operating_code",
+  "type": "CodeOfConduct",
+  "name": "Personal Operating Code",
+  "craft_ids": ["craft.personal_operations"],
+  "policies": [
+    "Preserve future play",
+    "Size exposure by survivability",
+    "Review decisions after contact with reality"
+  ],
+  "prohibited_actions": [
+    "Risk ruin for optional upside",
+    "Ignore repeated protocol failure"
+  ],
+  "required_constraints": [
+    "Define abort conditions before mission entry",
+    "Protect health, attention, and runway"
+  ],
+  "status": "draft"
+}
